@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Java NestedClass
 ---
 
 # Java 嵌套类
