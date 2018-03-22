@@ -94,3 +94,7 @@ x = 23
 this.x = 1
 ShadowTest.this.x = 0
 ```
+
+### 参考链接
+
+[https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html](https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html).
