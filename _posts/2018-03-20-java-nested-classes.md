@@ -95,6 +95,22 @@ this.x = 1
 ShadowTest.this.x = 0
 ```
 
+## 局部和匿名类
+
+还有另外两种内部类：在一个方法体里面定义一个内部类，被称作[局部类](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)；同样在方法体内定义一个内部类，并且没有命名，被称作[匿名类](https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html)。
+
+## Lambda表达式
+
+匿名类有这样一个问题：当它的实现非常简单时，例如为只有一个方法的接口，这时它的语法看起会显得笨重、不清楚。在这种情况下，经常是试图把一个函数作为参数传给另一个方法，[Lambda表达式](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)能很好解决这个问题。
+
+## 方法引用
+
+有些时候，Lambda表达式只是调用一个已经存在的方法，如果能通过一个名字就指向这个方法的话，会显得更加清晰。[方法引用](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html)可以实现这个，在调用方法时，它就是紧凑、易于阅读的Lambda表达式。
+
 ### 参考链接
 
 [https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html](https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html).
+[https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
+[https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html](https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html)
+[https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
+[https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html)
