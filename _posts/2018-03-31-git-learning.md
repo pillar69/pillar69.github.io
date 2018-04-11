@@ -8,7 +8,7 @@
 * 分布式（每个用户本地都拥有一个完整的仓库）
 
 > _Git_就是分布式的版本控制工具
-
+>
 > _GitHub_则是托管Git项目的服务
 
 ## 关键术语
@@ -242,7 +242,7 @@ Git根据所使用选项来判断是清除、暂存之前commit的更改，还�
 
 > 在进行任何重置操作之前，通常在最近的commit上创建`backup`分支，如果出现错误，可以返回这些commit
 
-### 总结
+### 小结
 
 * Create repositores
 * Make commits
@@ -250,3 +250,38 @@ Git根据所使用选项来判断是清除、暂存之前commit的更改，还�
 * Develop on branches
 * Merge branches and resolve conflicts
 * Undo changes
+
+`git remote`管理远程仓库并与之交互
+
+运行此命令时，如果尚未配置远程仓库，将不显示任何内容；如果**克隆**仓库后，将自动获得一个远程仓库。
+
+`origin`是远程仓库所在位置的简略表示，可以将它重命名为别的名字，但通常被命名为此名称。使用`-v`选项，查看远程仓库的完整路径。
+
+`git remote add <name> <url>`将本地仓库与远程仓库建立连接
+
+`git push <remote-shortname> <branch>`将本地commits推送到远程仓库
+
+注意：
+
+* 可能需要输入用户名和密码，取决于如何配置
+  * 如果使用HTTP版本的远程仓库，就需要
+  * 如果使用SSH协议，并提供密钥，不需要
+* 如果要输入用户名和密码，用户名会在输入后显示，但密码不会显示。只需继续输入密码，完成后按 Enter 键即可
+  * 如果输入密码出错，它会让重新输入
+* Git会压缩文件使之变小，然后将其推送至远程仓库
+
+**跟踪分支**的名称（`origin/master`）包含远程仓库的简写名及分支名称，可在本地仓库跟踪远程仓库的信息，但并不能实时表现被跟踪分支在远程仓库上的位置（当其他人对远程仓库做了更改时）。
+
+`git pull <remote-shortname> <branch>`拉取远程仓库的更改
+
+* 远程分支上的commit会被复制到本地仓库
+* 本地跟踪分支（`origin/master`）移到指向最新的commit
+* 本地跟踪分支（`origin/master`）合并到本地分支（`master`）
+
+`git fetch <remote-shortname> <branch>`用于从远程仓库分支检索commit,但不会在收到这些commit之后，自动将本地分支与远程跟踪分支合并。可以将 `git fetch` 想象成 `git pull` 它的一半操作，而 `git pull` 的另一半是合并。
+
+使用`git fetch`的一个主要情形是当远程分支和本地分支都拥有对方所没有的更改。要获取远程更改，将它们存储到本地分支中，然后手动执行合并。最后，可以将新的合并commit推送会远程仓库。
+
+## 参考链接
+
+[https://cn.udacity.com/course/version-control-with-git--ud123](https://cn.udacity.com/course/version-control-with-git--ud123)
