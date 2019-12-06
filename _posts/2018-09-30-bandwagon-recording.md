@@ -1,3 +1,8 @@
+---
+layout: default
+title: Tools
+---
+
 # bandwagon 记录
 
 ## 更改密码
